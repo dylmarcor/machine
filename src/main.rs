@@ -1,12 +1,13 @@
+use std::env;
 use utils::*;
 
-mod utils;
+mod utils; 
 
 fn main() {
-    // let args: Vec<String> = env::args().collect();
+    let args: Vec<String> = env::args().collect();
 
-    // let query = &args[1];
-    // println!("query is: {}", query);
+    let query = &args[1];
+    println!("query is: {}", query);
 
     // test rpm
     let x: f32 = 90.0;
