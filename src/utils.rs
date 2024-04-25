@@ -1,3 +1,4 @@
+// Consts
 const PI: f32 = core::f32::consts::PI;
 
 // Function for calculating RPM - Rotations Per Minute
