@@ -1,9 +1,6 @@
-// use std::env;
-// use std::fs;
-// use std::io;
+use utils::*;
 
-// Constants
-const PI: f32 = 3.14159;
+mod utils;
 
 fn main() {
     // let args: Vec<String> = env::args().collect();
@@ -22,24 +19,7 @@ fn main() {
     let length: f32 = 30.0;
     let diameter: f32 = 16.0;
 
-    println!("sfpm is {:?}", sfpm(rpm(x, y), diameter));
+    println!("sfpm is {:?}", utils::sfpm(utils::rpm(x, y), diameter));
 
     // println!("time is {:?} minutes", time(ipr, sfpm, length, diameter));
-}
-
-// Function for calculating RPM - Rotations Per Minute
-fn rpm(sfpm: f32, diameter: f32) -> f32 {
-    3.82 * sfpm / diameter
-}
-
-// Function for calculating SFPM - Surface Feet Per Minute
-fn sfpm(rpm: f32, diameter: f32) -> f32 {
-    diameter * PI * (1.0/12.0) * rpm
-}
-
-// Function for calculating machine time
-fn time(ipr: f32, sfpm: f32, length: f32, diameter: f32) -> f32 {
-    let rpm = rpm(sfpm, diameter);
-
-    length / (rpm * ipr) 
 }
