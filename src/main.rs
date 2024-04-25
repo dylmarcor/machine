@@ -13,6 +13,15 @@ fn main() {
         println!("rpm is {:?}", rpm(rpm_sfpm, rpm_diameter));
     }
 
+    // test time
+    if args[1] == "time" {
+        let time_ipr: f32 = args[2].parse::<f32>().expect("unrecognized argument given");
+        let time_sfpm: f32 = args[3].parse::<f32>().expect("unrecognized argument given");
+        let time_length: f32 = args[4].parse::<f32>().expect("unrecognized argument given");
+        let time_diameter: f32 = args[5].parse::<f32>().expect("unrecognized argument given");
+        println!("time is {:.2?} minutes", time(time_ipr, time_sfpm, time_length, time_diameter));
+    }
+
     // sfpm and time test
     let ipr: f32 = 0.005;
     let test_sfpm: f32 = 110.0;
@@ -20,5 +29,5 @@ fn main() {
     let diameter: f32 = 16.0;
 
     // println!("sfpm is {:?}", sfpm(rpm(rpm_sfpm, rpm_diameter), diameter));
-    // println!("time is {:?} minutes", time(ipr, test_sfpm, length, diameter));
+    // println!("time is {:.2?} minutes", time(ipr, test_sfpm, length, diameter));
 }
