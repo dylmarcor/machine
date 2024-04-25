@@ -16,3 +16,7 @@ pub fn time(ipr: f32, sfpm: f32, length: f32, diameter: f32) -> f32 {
 
     length / (rpm * ipr) 
 }
+
+pub fn thread_speed() {
+
+}
