@@ -1,13 +1,19 @@
+use std::io;
 use std::env;
 use utils::*;
+use crate::help::help::*;
 
 mod utils; 
+mod help;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
 
     // initial test
     if args.len() > 1  {
+        if args[1] == "help" {
+            display_help()
+        }
 
         // test rpm
         if args[1] == "rpm" {
