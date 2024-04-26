@@ -7,23 +7,24 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     // initial test
-    if args.len() > 1 {
+    if args.len() > 1  {
 
         // test rpm
         if args[1] == "rpm" {
+            println!("rpm is good.");
             let rpm_sfpm: f32 = args[2].parse::<f32>().expect("unrecognized argument given");
             let rpm_diameter: f32 = args[3].parse::<f32>().expect("unrecognized argument given");
-            println!("rpm is {:?}", rpm(rpm_sfpm, rpm_diameter));
+            println!("rpm is {:.2}", rpm(rpm_sfpm, rpm_diameter));
         }
 
         // test time
-        if args[1] == "time" {
-            let time_ipr: f32 = args[2].parse::<f32>().expect("unrecognized argument given");
-            let time_sfpm: f32 = args[3].parse::<f32>().expect("unrecognized argument given");
-            let time_length: f32 = args[4].parse::<f32>().expect("unrecognized argument given");
-            let time_diameter: f32 = args[5].parse::<f32>().expect("unrecognized argument given");
-            println!("time is {:.2?} minutes", time(time_ipr, time_sfpm, time_length, time_diameter));
-        }
+        //if args.tool == TIME {
+        //    let time_ipr: f32 = args[2].parse::<f32>().expect("unrecognized argument given");
+        //    let time_sfpm: f32 = args[3].parse::<f32>().expect("unrecognized argument given");
+        //    let time_length: f32 = args[4].parse::<f32>().expect("unrecognized argument given");
+        //    let time_diameter: f32 = args[5].parse::<f32>().expect("unrecognized argument given");
+        //    println!("time is {:.2?} minutes", time(time_ipr, time_sfpm, time_length, time_diameter));
+        //}
     } else {
         println!("no arguments given!"); 
     }
