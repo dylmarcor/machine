@@ -24,13 +24,13 @@ fn main() {
         }
 
         // test time
-        //if args.tool == TIME {
-        //    let time_ipr: f32 = args[2].parse::<f32>().expect("unrecognized argument given");
-        //    let time_sfpm: f32 = args[3].parse::<f32>().expect("unrecognized argument given");
-        //    let time_length: f32 = args[4].parse::<f32>().expect("unrecognized argument given");
-        //    let time_diameter: f32 = args[5].parse::<f32>().expect("unrecognized argument given");
-        //    println!("time is {:.2?} minutes", time(time_ipr, time_sfpm, time_length, time_diameter));
-        //}
+        if args[1] == "time" {
+            let time_ipr: f32 = args[2].parse::<f32>().expect("unrecognized argument given");
+            let time_sfpm: f32 = args[3].parse::<f32>().expect("unrecognized argument given");
+            let time_length: f32 = args[4].parse::<f32>().expect("unrecognized argument given");
+            let time_diameter: f32 = args[5].parse::<f32>().expect("unrecognized argument given");
+            println!("time is {:.2?} minutes", time(time_ipr, time_sfpm, time_length, time_diameter));
+        }
     } else {
         println!("no arguments given!"); 
     }

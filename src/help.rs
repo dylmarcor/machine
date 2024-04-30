@@ -14,11 +14,20 @@ pub mod help {
 
             let input = input.trim(); 
 
+            if input == "list" {
+                print!("{}[2J", 27 as char);
+                println!("Here are the current functions available:");
+                println!("rpm");
+                println!("sfpm");
+            }
+
             if input == "rpm" {
+                print!("{}[2J", 27 as char);
                 println!("You must enter the SFPM and the Diameter of the material in inches, in that order.\n
                         Usage: rpm <SFPM> <Diameter>\n
                         Example: rpm 90.0 1.5\n");
             }
+
 
             if input == "q" || input == "quit" {
                 break;
